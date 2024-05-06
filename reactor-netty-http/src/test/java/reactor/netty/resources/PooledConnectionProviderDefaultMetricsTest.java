@@ -256,6 +256,7 @@ class PooledConnectionProviderDefaultMetricsTest extends BaseHttpTest {
 				.pendingAcquireMaxCount(1000)
 				.maxConnections(500)
 				.metrics(true)
+				.disposeTimeout(Duration.ofSeconds(1))
 				.build();
 
 		try {
